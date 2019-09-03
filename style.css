@@ -7,8 +7,9 @@
     box-sizing: border-box;
 }
 
+/* html tags */
 body {
-    background-color: #2b2e4a;
+    background-color: #17223b;
     font-family: 'Open Sans', sans-serif;
     max-width: 100%;
     margin: 0 auto;
@@ -23,21 +24,28 @@ header {
     padding: 1.25rem;
 }
 
-header > h1 {
-    color: #2b2e4a;
+footer {
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: #eee;
+    border-top: 0.0625rem solid #eeeeee;
+    margin-top: 0.8rem;
+    padding: 1rem 0;
+}
+
+img {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+h1 {
+    color: #17223b;
     text-align: center;
 }
 
+/* Class selectors */
 .main-content {
     flex-grow: 1;
-}
-
-footer {
-    margin: 0 auto;
-    color: #888;
-    border-top: 0.0625rem solid #eeeeee;
-    margin-top: 1rem;
-    padding: 1rem 0;
 }
 
 .score-board {
@@ -53,22 +61,10 @@ footer {
 }
 
 .badge {
-    background: #e84545;
+    background: #ff6768;
     color: #eee;
     font-size: 0.9rem;
     padding: 0.125rem 0.625rem;
-}
-
-#user-label {
-    position: absolute;
-    top: 40%;
-    left: -14%;
-}
-
-#computer-label {
-    position: absolute;
-    top: 40%;
-    right: -14%;
 }
 
 .result {
@@ -79,15 +75,6 @@ footer {
 .result > p {
     text-align: center;
     font-weight: bold;
-}
-
-img {
-    width: 7.5rem;
-    height: 7.5rem;
-}
-
-#scissors {
-    transform: rotateY(180deg);
 }
 
 .choices {
@@ -105,8 +92,25 @@ img {
 }
 
 .choice:hover {
-    background: #53354a;
+    background: #263859;
     cursor: pointer;
+}
+
+/* ID-Selectors */
+#user-label {
+    position: absolute;
+    top: 40%;
+    left: -14%;
+}
+
+#computer-label {
+    position: absolute;
+    top: 40%;
+    right: -14%;
+}
+
+#scissors {
+    transform: rotateY(180deg);
 }
 
 #action-message {
@@ -117,10 +121,15 @@ img {
     margin-top: 2.5rem;
 }
 
-@media screen and (max-width: 620px) {
+/* Media-Querys */
+@media screen and (max-width: 1050px) {
     img {
         width: 5.625rem;
         height: 5.625rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
     }
 
     .result {
@@ -128,14 +137,29 @@ img {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 800px) {
     img {
-        width: 4rem;
-        height: 4rem;
+        width: 5.2rem;
+        height: 5.2rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
     }
 
     h1 {
+        font-size: 1.5rem;
+    }
+
+    .result {
         font-size: 1.625rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 4rem;
+        height: 4rem;
     }
 
     .result {
@@ -152,5 +176,37 @@ img {
 
     .badge {
         font-size: 0.8rem;
+    }
+
+    #action-message {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+
+    .result {
+        font-size: 1rem;
+    }
+
+    .score-board {
+        width: 9rem;
+        font-size: 2rem;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+    }
+
+    #action-message {
+        font-size: 1rem;
     }
 }
