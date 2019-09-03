@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html tags */
+body {
+    background-color: #17223b;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #eee;
+    padding: 1.25rem;
+}
+
+footer {
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: #eee;
+    border-top: 0.0625rem solid #eeeeee;
+    margin-top: 0.8rem;
+    padding: 1rem 0;
+}
+
+img {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+h1 {
+    color: #17223b;
+    text-align: center;
+}
+
+/* Class selectors */
+.main-content {
+    flex-grow: 1;
+}
+
+.score-board {
+    margin: 2.5rem auto 1.25rem;
+    border: 0.2rem solid #eee;
+    border-radius: 0.25rem;
+    text-align: center;
+    width: 12.5rem;
+    color: #eee;
+    font-size: 2.875rem;
+    padding: 1rem 1.25rem;
+    position: relative;
+}
+
+.badge {
+    background: #ff6768;
+    color: #eee;
+    font-size: 0.9rem;
+    padding: 0.125rem 0.625rem;
+}
+
+.result {
+    font-size: 2.5rem;
+    color: #eee;
+}
+
+.result > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.choices {
+    margin-top: 3.125rem;
+    text-align: center;
+}
+
+.choice {
+    border: 0.25rem solid #eee;
+    border-radius: 50%;
+    margin: 0 1.25rem;
+    padding: 1rem;
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+
+.choice:hover {
+    background: #263859;
+    cursor: pointer;
+}
+
+/* Glowing Ring Classes */
+.green-glow {
+    border: 0.25rem solid #4dcc7d;
+    box-shadow: 0 0 0.625rem #31b43a;
+}
+
+.red-glow {
+    border: 0.25rem solid #fc121b;
+    box-shadow: 0 0 0.625rem #d01115;
+}
+
+.gray-glow {
+    border: 0.25rem solid #25292b;
+    box-shadow: 0 0 0.625rem #6a6a6b;
+}
+
+/* ID-Selectors */
+#user-label {
+    position: absolute;
+    top: 40%;
+    left: -14%;
+}
+
+#computer-label {
+    position: absolute;
+    top: 40%;
+    right: -14%;
+}
+
+#scissors {
+    transform: rotateY(180deg);
+}
+
+#action-message {
+    text-align: center;
+    color: #eee;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 2.5rem;
+}
+
+/* Media-Querys */
+@media screen and (max-width: 1050px) {
+    img {
+        width: 5.625rem;
+        height: 5.625rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    .result {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    img {
+        width: 5.2rem;
+        height: 5.2rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .result {
+        font-size: 1.625rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .result {
+        font-size: 1.2rem;
+    }
+
+    .score-board {
+        width: 11rem;
+        color: #eee;
+        font-size: 2.2rem;
+        padding: 1rem 1.25rem;
+        position: relative;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+    }
+
+    #action-message {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+
+    .result {
+        font-size: 1rem;
+    }
+
+    .score-board {
+        width: 9rem;
+        font-size: 2rem;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+    }
+
+    #action-message {
+        font-size: 1rem;
+    }
+}

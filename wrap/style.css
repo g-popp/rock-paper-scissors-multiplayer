@@ -96,6 +96,22 @@ h1 {
     cursor: pointer;
 }
 
+/* Glowing Ring Classes */
+.green-glow {
+    border: 0.25rem solid #4dcc7d;
+    box-shadow: 0 0 0.625rem #31b43a;
+}
+
+.red-glow {
+    border: 0.25rem solid #fc121b;
+    box-shadow: 0 0 0.625rem #d01115;
+}
+
+.gray-glow {
+    border: 0.25rem solid #25292b;
+    box-shadow: 0 0 0.625rem #6a6a6b;
+}
+
 /* ID-Selectors */
 #user-label {
     position: absolute;
